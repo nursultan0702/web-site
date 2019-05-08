@@ -3,7 +3,7 @@
     <v-app>
       <app-header/>
       <!--Carousel start-->
-      <div class="mt-5">
+      <div>
         <v-carousel delimiter-icon="stop" prev-icon="mdi-arrow-left" next-icon="mdi-arrow-right">
           <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src">
           </v-carousel-item>

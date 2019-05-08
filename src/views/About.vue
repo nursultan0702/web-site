@@ -1,5 +1,9 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+  <div class="row">
+    <div class="col-sm-3" style="background-color:lavender;"></div>
+    <div class="col-sm-6" style="background-color:lavenderblush;">.col-sm-6</div>
+    <div class="col-sm-3" style="background-color:lavender;"></div>
   </div>
+</div>
 </template>
