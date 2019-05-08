@@ -11,7 +11,7 @@
     </v-navigation-drawer>
     <v-toolbar app dark flat color="transparent">
       <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
-      <v-toolbar-title v-text="'Сайт находится в разработке, для загрузки файла для закупок переходите по ссылке ГОС ЗАКУПКИ #2'"></v-toolbar-title>
+      <v-toolbar-title v-text="'Сайт находится в разработке, для загрузки файла для закупок переходите по ссылке Государственные закупки #2'"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn
@@ -47,7 +47,7 @@ export default {
           route: "/about"
         },
         {
-          title: "Гос закупки",
+          title: "Государственные закупки",
           route: "/govsell"
         },
         {
