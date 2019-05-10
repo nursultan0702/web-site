@@ -7,13 +7,13 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Ссылка</th>
+      <th scope="col">Ссылка на Объявление</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td> <a href="https://drive.google.com/drive/folders/1u2CUIYUzTMfKoLPYa2vMd45b0YXNBogS">Скачать документ</a> </td>
+      <td> <a href="https://drive.google.com/file/d/1VbMnko3riIM_W3iWKdKQr5QZEQv-SWfg/view?usp=sharing">Скачать документ</a> </td>
     </tr>
   </tbody>
 </table>

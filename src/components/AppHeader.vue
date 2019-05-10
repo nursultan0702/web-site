@@ -20,6 +20,13 @@
           :to="item.route"
           flat
         >{{item.title}}</v-btn>
+        <div class="dropdown">
+          <v-btn class="dropbtn" to='/govsell' flat>Государственные закупки</v-btn>
+          <div class="dropdown-content">
+            <v-btn to='/declaration' flat>Объявления</v-btn>
+            
+          </div>
+        </div>
         <v-btn @click.prevent="logout()" flat>Выйти</v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -48,10 +55,6 @@ export default {
           route: "/about"
         },
         {
-          title: "Государственные закупки",
-          route: "/govsell"
-        },
-        {
           title: "Блоги",
           route: "/home"
         },
@@ -62,13 +65,35 @@ export default {
         {
           title: "Регистрация",
           route: "/registration"
-        },
-         {
-          title: "Объявления",
-          route: "/declaration"
-        },
+        }
       ];
     }
   }
 };
 </script>
+
+<style>
+.dropdown {
+  padding-top: 21px
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0497f8;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(83, 175, 236);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+</style>
