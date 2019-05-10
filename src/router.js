@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Gosvell from './views/Govsell.vue'
+import Registration from './views/Registration.vue'
+import About from './views/About.vue'
+import Declaration from './views/Declaration'
 
 Vue.use(Router)
 
@@ -18,12 +21,25 @@ export default new Router({
       component: Gosvell
     },
     {
+      path: '/govsell',
+      name: 'govsell',
+      component: Gosvell
+    },
+    {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+      component: About
+    },
+    {
+      path: '/registration',
+      name: 'registration',
+      component: Registration
+    },
+    {
+      path: '/declaration',
+      name: 'declaration',
+      component: Declaration
+    },
+    
   ]
 })
