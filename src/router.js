@@ -5,6 +5,7 @@ import Gosvell from './views/Govsell.vue'
 import Registration from './views/Registration.vue'
 import About from './views/About.vue'
 import Declaration from './views/Declaration'
+import Login from './views/Login'
 
 Vue.use(Router)
 
@@ -39,6 +40,11 @@ export default new Router({
       path: '/declaration',
       name: 'declaration',
       component: Declaration
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     },
     
   ]

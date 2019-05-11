@@ -2,7 +2,7 @@
   <div>
     <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up">
       <v-list>
-        <v-list-tile v-for="(item, i) in menuItems" :key="`navdrawer${i}`">
+        <v-list-tile v-for="(item, i) in menuItems" :key="`navdrawer${i}`" @click="" :to="item.route" >
           <v-list-tile-content>
             <v-list-tile-title v-text="item.title"></v-list-tile-title>
           </v-list-tile-content>
@@ -27,7 +27,8 @@
             
           </div>
         </div>
-        <v-btn @click.prevent="logout()" flat>Выйти</v-btn>
+        <v-btn @click.prevent="logout()" v-if="isUserAuthenticate" flat>Выйти</v-btn>
+        <v-btn to="/login" v-if="!isUserAuthenticate" flat>Войти</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     
@@ -43,7 +44,15 @@ export default {
       
     };
   },
+  methods:{
+            logout(){
+                this.$store.dispatch('logout')
+            }
+        },
   computed: { 
+    isUserAuthenticate(){
+                return this.$store.getters.isUserAuthenticated;
+            },
     menuItems() {
       return [
         {
@@ -57,10 +66,6 @@ export default {
         {
           title: "Блоги",
           route: "/home"
-        },
-         {
-          title: "Войти",
-          route: "/login"
         },
         {
           title: "Регистрация",
