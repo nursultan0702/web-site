@@ -1,7 +1,29 @@
 <template>
-    <div>
-        <v-footer :fixed="true" app>
-            <span>Детская городская больница 2 &copy; 2019</span>
-        </v-footer>
-    </div>
+  <v-footer
+    dark
+    height="auto"
+  >
+    <v-card
+      class="flex"
+      flat
+      tile
+    >
+      <v-card-title class="teal">
+        <strong class="subheading">Все права защищены</strong>
+
+        <v-spacer></v-spacer>
+      </v-card-title>
+
+      <v-card-actions class="grey darken-3 justify-center">
+        <p> &copy;2019 — <strong> Детская больница</strong></p>
+      </v-card-actions>
+    </v-card>
+  </v-footer>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+    })
+  }
+</script>

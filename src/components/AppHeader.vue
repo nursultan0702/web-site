@@ -1,8 +1,9 @@
+/* eslint-disable */
 <template>
   <div>
     <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up">
       <v-list>
-        <v-list-tile v-for="(item, i) in menuItems" :key="`navdrawer${i}`" @click="" :to="item.route" >
+        <v-list-tile v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route" >
           <v-list-tile-content>
             <v-list-tile-title v-text="item.title"></v-list-tile-title>
           </v-list-tile-content>
