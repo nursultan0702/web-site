@@ -6,6 +6,7 @@ import Registration from './views/Registration.vue'
 import About from './views/About.vue'
 import Declaration from './views/Declaration'
 import Login from './views/Login'
+// import { Store } from 'vuex';
 
 Vue.use(Router)
 
@@ -15,11 +16,6 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/govsell',
-      name: 'govsell',
-      component: Gosvell
     },
     {
       path: '/govsell',
@@ -46,6 +42,12 @@ export default new Router({
       name: 'login',
       component: Login
     },
-    
   ]
 })
+
+// function AuthGuard(from,to,next){
+//   if(Store.getters.isUserAuthenticated)
+//   next()
+//   else
+//   next('/login')
+// }

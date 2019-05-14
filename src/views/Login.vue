@@ -9,7 +9,7 @@
           </v-toolbar>
           <v-card-text>
             <v-alert :value="error" type="warning">{{error}}</v-alert>
-            <v-form>
+            <v-form v-model="valid">
               <v-text-field
                 prepend-icon="person"
                 name="login"
@@ -17,6 +17,7 @@
                 type="email"
                 required
                 v-model="email"
+                :rules="emailRules"
               ></v-text-field>
               <v-text-field
                 id="password"
@@ -26,6 +27,7 @@
                 type="password"
                 required
                 v-model="password"
+                :rules="passwordRules"
               ></v-text-field>
             </v-form>
           </v-card-text>
@@ -46,7 +48,17 @@ export default {
   data() {
     return {
       email: null,
-      password: null
+      password: null,
+      valid: false,
+      emailRules: [
+        (v) => !!v || 'Пожалуйста введите email',
+      // eslint-disable-next-line 
+        (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Неправильный email'
+      ],
+      passwordRules: [
+        (v) => !!v || 'Пожалуйста введите пароль',
+        (v) => (v && v.length >= 6) || 'Пароль слишком короткий - минимум 6 символов'
+      ]
     };
   },
   computed:{
