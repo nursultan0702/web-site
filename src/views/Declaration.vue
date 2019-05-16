@@ -21,7 +21,19 @@
 <v-expansion-panel>
     <v-expansion-panel-content>
       <template v-slot:header>
-        <div>№1. Объявление о повторном проведении закупа способом тендера</div>
+        <div>№1. Объявление о проведении закупа способом запроса ценовых предложений</div>
+      </template>
+      <v-card>
+        <v-card-text>
+<a href="https://drive.google.com/file/d/1VbMnko3riIM_W3iWKdKQr5QZEQv-SWfg/view?usp=sharing" download>Скачать документ</a>
+        </v-card-text>
+      </v-card>
+    </v-expansion-panel-content>
+
+<v-expansion-panel>
+    <v-expansion-panel-content>
+      <template v-slot:header>
+        <div>№2. Объявление о повторном проведении закупа способом тендера</div>
       </template>
       <v-card>
         <v-card-text>
@@ -39,7 +51,7 @@
 
     <v-expansion-panel-content>
       <template v-slot:header>
-        <div>№2. Объявление о проведении закупа способом тендера</div>
+        <div>№3. Объявление о проведении закупа способом тендера</div>
       </template>
       <v-card>
         <v-card-text>
