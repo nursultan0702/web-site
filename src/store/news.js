@@ -11,24 +11,21 @@ export default {
     },
     actions:{
       loadNews({commit}){
-        Vue.$db.collection("news")
-        .get()
-        .then(querySnapshot => {
-            let news = []
-            querySnapshot.forEach(s => {
-                const data = s.data
+          let news=[]
+        Vue.$db.collection("news").get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                console.log(doc.id, " => ", doc.data());
                 let post = {
-                    id: data.id,
-                    title: data.title,
-                    img: data.img,
-                    postDate: data.postDate,
-                    body: data.body
+                    id: doc.id,
+                    title: doc.data().title,
+                    img: doc.data().img,
+                    postDate: doc.data().postDate,
+                    body: doc.data().body
                 }
                 news.push(post)
-            })
-            commit('set_news', news)
-        })
-        .catch(error => console.log(error))
+            });
+        });
+        commit("set_news",news)
       }
     },
     getters: {

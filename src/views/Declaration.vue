@@ -19,7 +19,7 @@
 </table> -->
 <h3>Объявление</h3>
 <v-expansion-panel>
-    <v-expansion-panel-content>
+    <v-expansion-panel-content key="1">
       <template v-slot:header>
         <div>№1. Объявление о проведении закупа способом запроса ценовых предложений</div>
       </template>
@@ -30,8 +30,7 @@
       </v-card>
     </v-expansion-panel-content>
 
-<v-expansion-panel>
-    <v-expansion-panel-content>
+    <v-expansion-panel-content key="2">
       <template v-slot:header>
         <div>№2. Объявление о повторном проведении закупа способом тендера</div>
       </template>
@@ -49,7 +48,7 @@
       </v-card>
     </v-expansion-panel-content>
 
-    <v-expansion-panel-content>
+    <v-expansion-panel-content key="3">
       <template v-slot:header>
         <div>№3. Объявление о проведении закупа способом тендера</div>
       </template>

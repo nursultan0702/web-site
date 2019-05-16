@@ -57,7 +57,7 @@
       <div class="card-body">
         <h5 class="card-title">{{item.title}}</h5>
         <p class="card-text">{{item.body}}</p>
-        <p class="card-text"><small class="text-muted">{{item.datePost}}</small></p>
+        <p class="card-text"><small class="text-muted">{{item.postDate}}</small></p>
       </div>
     </div>
     <div class="card mb-3">
@@ -83,6 +83,7 @@ export default {
   },
   computed:{
     news(){
+      console.log(this.$store.getters.getNews)
       return this.$store.getters.getNews
     }
   },
