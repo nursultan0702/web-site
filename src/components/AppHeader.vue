@@ -29,6 +29,7 @@
           </div>
         </div>
         <v-btn @click.prevent="logout()" v-if="isUserAuthenticate" flat>Выйти</v-btn>
+        <v-btn to="/admin" v-if="isUserAuthenticate" flat>Admin</v-btn>
         <v-btn to="/registration" v-if="!isUserAuthenticate" flat>Регистрация</v-btn>
         <v-btn to="/login" v-if="!isUserAuthenticate" flat>Войти</v-btn>
       </v-toolbar-items>
