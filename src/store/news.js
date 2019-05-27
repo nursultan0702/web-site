@@ -29,6 +29,7 @@ export default {
             });
             commit("set_news", news)
         },
+        // eslint-disable-next-line
         addPost({commit},payload) {
             var reader = new FileReader();
             reader.onloadend = function (evt) {
@@ -40,13 +41,13 @@ export default {
             };
             reader.readAsArrayBuffer(payload.file);
             Vue.$db.collection("news").add({
-                id: '123123',
                 title: payload.title,
                 body: payload.body,
                 img: payload.img,
                 postDate: payload.postDate
             });
         },
+        // eslint-disable-next-line
         delete({commit},payload){
             Vue.$db.collection("news").doc(payload).delete();
         }

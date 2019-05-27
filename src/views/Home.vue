@@ -3,53 +3,9 @@
         <div class="row">
             <div class="col-sm-3 pt-2">
                 <h2>Социальные сети</h2>
-                <v-card
-                        class="mx-auto"
-                        color="#26c6da"
-                        dark
-                        max-width="400"
-                >
-                    <v-card-title>
-                        <v-icon
-                                large
-                                left
-                        >
-                            mdi-twitter
-                        </v-icon>
-                        <span class="title font-weight-light">Twitter</span>
-                    </v-card-title>
-
-                    <v-card-text class="headline font-weight-bold">
-                        "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are
-                        type invalid as well."
-                    </v-card-text>
-
-                    <v-card-actions>
-                        <v-list-tile class="grow">
-                            <v-list-tile-avatar color="grey darken-3">
-                                <v-img
-                                        class="elevation-6"
-                                        src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                ></v-img>
-                            </v-list-tile-avatar>
-
-                            <v-list-tile-content>
-                                <v-list-tile-title>Evan You</v-list-tile-title>
-                            </v-list-tile-content>
-
-                            <v-layout
-                                    align-center
-                                    justify-end
-                            >
-                                <v-icon class="mr-1">mdi-heart</v-icon>
-                                <span class="subheading mr-2">256</span>
-                                <span class="mr-1">·</span>
-                                <v-icon class="mr-1">mdi-share-variant</v-icon>
-                                <span class="subheading">45</span>
-                            </v-layout>
-                        </v-list-tile>
-                    </v-card-actions>
-                </v-card>
+                <a class="twitter-timeline"
+                   data-height="600"
+                   href="https://twitter.com/minhealthKZ?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
             </div>
             <div class="col-sm-6 pt-2">
                 <h2>Новости</h2>
@@ -63,10 +19,10 @@
                             <small class="text-muted">{{item.postDate}}</small>
                         </p>
                         <v-divider></v-divider>
-                        <button class="btn btn-danger" @click.prevent="delete(item.id)">Удалить</button>
+                        <button class="btn btn-danger" @click="deletePost(item.id)">Удалить</button>
                     </div>
                 </div>
-                <div class="card mb-3">
+                <div class="card mb-3" v-if="getAuth">
                     <div class="card-body">
                         <h5 class="card-title"><label>Введите тему</label>
                             <input v-model="newPostTitle" type="text" class="form-control"
@@ -117,7 +73,17 @@
                     img: img,
                     postDate: date,
                     file: this.file[0]
-                })
+                });
+                this.$swal({
+                    type: 'success',
+                    title: 'Новый пост был успешно добавлен',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                this.reloadPage()
+            },
+            reloadPage(){
+                setTimeout(() =>  this.$router.go(), 2000);
             },
             getFile() {
                 this.file = this.$refs.myFile.files
@@ -129,13 +95,23 @@
             generateUid() {
                 return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
             },
-            delete(id){
+            deletePost(id){
                 this.$store.dispatch("delete",id);
+                this.$swal({
+                    type: 'success',
+                    title: 'Пост был успешно удален',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                this.reloadPage()
             }
         },
         computed: {
             news() {
                 return this.$store.getters.getNews
+            },
+            getAuth(){
+                return this.$store.getters.isUserAuthenticated
             }
         },
         name: "home",

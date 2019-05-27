@@ -1,73 +1,133 @@
 <template>
-  <div>
-  <div class="row">
-    <div class="col-sm-3" style="background-color:lavender;"></div>
-    <div class="col-sm-6 pt-5">
-        <!-- <table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Ссылка на Объявление</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td> <a href="https://drive.google.com/file/d/1VbMnko3riIM_W3iWKdKQr5QZEQv-SWfg/view?usp=sharing">Скачать документ</a> </td>
-    </tr>
-  </tbody>
-</table> -->
-<h3>Объявление</h3>
-<v-expansion-panel>
-    <v-expansion-panel-content key="1">
-      <template v-slot:header>
-        <div>№1. Объявление о проведении закупа способом запроса ценовых предложений</div>
-      </template>
-      <v-card>
-        <v-card-text>
-<a href="https://drive.google.com/file/d/1VbMnko3riIM_W3iWKdKQr5QZEQv-SWfg/view?usp=sharing" download>Скачать документ</a>
-        </v-card-text>
-      </v-card>
-    </v-expansion-panel-content>
+    <div>
+        <div class="row">
+            <div class="col-sm-3" style="background-color:lavender;"></div>
+            <div class="col-sm-6 pt-5">
+                <h3>Объявление</h3>
+                <v-expansion-panel>
+                    <v-expansion-panel-content key="1">
+                        <template v-slot:header>
+                            <div>№1. Объявление о проведении закупа способом запроса ценовых предложений</div>
+                        </template>
+                        <v-card>
+                            <v-card-text>
+                                <a href="https://drive.google.com/file/d/1VbMnko3riIM_W3iWKdKQr5QZEQv-SWfg/view?usp=sharing"
+                                   download>Скачать документ</a>
+                            </v-card-text>
+                        </v-card>
+                    </v-expansion-panel-content>
 
-    <v-expansion-panel-content key="2">
-      <template v-slot:header>
-        <div>№2. Объявление о повторном проведении закупа способом тендера</div>
-      </template>
-      <v-card>
-        <v-card-text>
-          ГКП на ПХВ "Детская городская клиническая больница №2" УОЗ города Алматы объявляет о повторном проведении закупа способом тендера лекарственных средств на 2019 год. Международные непатентованные наименования закупаемых товаров, краткое описание товаров и их количество (объем, выделенная сумма для закупки),  полный перечень которых, их количество и подробная спецификация указаны в тендерной документации. Товар должен быть доставлен: ГКП на ПХВ «Детская городская клиническая больница №2» УОЗ г.Алматы, адрес:  г.Алматы, микрорайон 2, дом 54.
-Пакет тендерной документации можно получить в срок до 09-00 часов 31 мая 2019 года включительно по адресу: г. Алматы, микрорайон 2, дом 54, ГКП на ПХВ «Детская городская клиническая больница №2» 2 этаж, отдел государственных закупок, время с 08-00 до 17-00 часов или по электронной почте zakup.dgkb2@mail.ru. Окончательный срок представления тендерных заявок до 09-00 часов 31 мая  2019 года. Конверты с тендерными заявками будут вскрываться в 11-00 часов 31 мая 2019 года по следующему адресу: г. Алматы, микрорайон 2, дом 54, ГКП на ПХВ «Детская городская клиническая больница №2» 3 этаж, конферензал. Потенциальные поставщики могут присутствовать при вскрытии конвертов с тендерными заявками. Дополнительную информацию и справку можно получить по телефону: 8 (727) 276 32 56 
-
-
-	<br><b>Секретарь тендерной комиссии
-Әділхан Ш.Қ.</b> <br>
-<a href="https://drive.google.com/file/d/1uqdKXMvUkKq6UhiTAbgkwtZOcybTmN4I/view?usp=sharing" download>Скачать документ</a>
-
-        </v-card-text>
-      </v-card>
-    </v-expansion-panel-content>
-
-    <v-expansion-panel-content key="3">
-      <template v-slot:header>
-        <div>№3. Объявление о проведении закупа способом тендера</div>
-      </template>
-      <v-card>
-        <v-card-text>
-          ГКП на ПХВ "Детская городская клиническая больница №2" УОЗ города Алматы объявляет о повторном проведении закупа способом тендера лекарственных средств на 2019 год. Международные непатентованные наименования закупаемых товаров, краткое описание товаров и их количество (объем, выделенная сумма для закупки),  полный перечень которых, их количество и подробная спецификация указаны в тендерной документации. Товар должен быть доставлен: ГКП на ПХВ «Детская городская клиническая больница №2» УОЗ г.Алматы, адрес:  г.Алматы, микрорайон 2, дом 54.
-Пакет тендерной документации можно получить в срок до 09-00 часов 05 июня 2019 года включительно по адресу: г. Алматы, микрорайон 2, дом 54, ГКП на ПХВ «Детская городская клиническая больница №2» 2 этаж, отдел государственных закупок, время с 08-00 до 17-00 часов или по электронной почте zakup.dgkb2@mail.ru. Окончательный срок представления тендерных заявок до 09-00 часов 05 июня  2019 года. Конверты с тендерными заявками будут вскрываться в 11-00 часов 05 июня 2019 года по следующему адресу: г. Алматы, микрорайон 2, дом 54, ГКП на ПХВ «Детская городская клиническая больница №2» 3 этаж, конферензал. Потенциальные поставщики могут присутствовать при вскрытии конвертов с тендерными заявками. Дополнительную информацию и справку можно получить по телефону: 8 (727) 276 32 56 
-
-
-<br><b>Секретарь тендерной комиссии
-Әділхан Ш.Қ.</b><br>
-<a href="https://drive.google.com/file/d/1AplpF8eXduHn7HGmvlNNoLXLRbmcC7Ma/view?usp=sharing" download>Скачать документ</a>
-
-        </v-card-text>
-      </v-card>
-    </v-expansion-panel-content>
-  </v-expansion-panel>
+                    <v-expansion-panel-content v-for="(item,i) in declarations" :key="`${item.id}`">
+                        <template v-slot:header>
+                            <div>№{{i+1}}. {{item.title}}</div>
+                        </template>
+                        <v-card>
+                            <v-card-text>
+                                {{item.body}}
+                                <a :href="item.docs"
+                                   download>Скачать документ</a>
+                                <v-divider></v-divider>
+                                <button class="btn btn-danger" @click="deleteDec(item.id)">Удалить</button>
+                            </v-card-text>
+                        </v-card>
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+                <div class="card mb-3" v-if="getAuth">
+                    <div class="card-body">
+                        <h5 class="card-title"><label>Введите тему</label>
+                            <input v-model="newDeclarationTitle" type="text" class="form-control"
+                                   aria-describedby="inputGroup-sizing-default">
+                        </h5>
+                        <h6 class="card-text">Выберите документ</h6>
+                        <div class="custom-file">
+                            <input type="file"
+                                   id="file" name="avatar"
+                                   accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf,.zip,.rar"
+                                   ref="myDocs"
+                                   @change="getDocs">
+                        </div>
+                        <h6 class="card-text">Введите основной текст</h6>
+                        <textarea class="form-control" aria-label="With textarea" maxlength="10000"
+                                  v-model="newDeclarationBody"></textarea>
+                        <v-divider></v-divider>
+                        <button @click.prevent="saveDeclaration" class="btn btn-primary float-right">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="background-color:lavender;"></div>
+        </div>
     </div>
-    <div class="col-sm-3" style="background-color:lavender;"></div>
-  </div>
-</div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                newDeclarationTitle: null,
+                newDeclarationBody: null,
+                docs: null,
+                file: []
+            }
+        },
+        methods: {
+            saveDeclaration() {
+                var today = new Date();
+                var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+                var docs = "";
+                if (this.file[0].name) {
+                    docs = this.file[0].name;
+                }
+                this.$store.dispatch("addDeclaration", {
+                    title: this.newDeclarationTitle,
+                    body: this.newDeclarationBody,
+                    docs: docs,
+                    postDate: date,
+                    file: this.file[0]
+                });
+                this.$swal({
+                    type: 'success',
+                    title: 'Добавлено',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                this.reloadPage()
+            },
+            reloadPage() {
+                setTimeout(() => this.$router.go(), 2000);
+            },
+            getDocs() {
+                this.file = this.$refs.myDocs.files
+            },
+            getUID() {
+                return (this.generateUid() + this.generateUid() + "-" + this.generateUid() + "-4" + this.generateUid().substr(0, 3) + "-" + this.generateUid() + "-"
+                    + this.generateUid() + this.generateUid() + this.generateUid()).toLowerCase();
+            },
+            generateUid() {
+                return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+            },
+            deleteDec(id) {
+                this.$store.dispatch("deleteDec", id);
+                this.$swal({
+                    type: 'success',
+                    title: 'Удалено',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                this.reloadPage()
+            }
+        },
+        computed: {
+            declarations() {
+                return this.$store.getters.getDeclarations
+            },
+            getAuth(){
+                return this.$store.getters.isUserAuthenticated
+            }
+        },
+        beforeCreate(){
+            this.$store.dispatch('loadDeclarations');
+        },
+        name: "home",
+        components: {},
+    };
+</script>

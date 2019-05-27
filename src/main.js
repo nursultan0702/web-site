@@ -9,9 +9,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import firebaseConfig from './config/firebaseConfig'
 import firebase from 'firebase'
 import "firebase/firestore"
+import VueSweetalert2 from 'vue-sweetalert2';
+
 
 Vue.config.productionTip = false;
 Vue.use(Vuetify);
+Vue.use(VueSweetalert2);
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 var storage = firebase.storage();

@@ -8,7 +8,7 @@ import Declaration from './views/Declaration'
 import Login from './views/Login'
 // import Store  from './store';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
