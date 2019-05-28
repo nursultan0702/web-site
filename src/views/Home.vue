@@ -19,7 +19,7 @@
                             <small class="text-muted">{{item.postDate}}</small>
                         </p>
                         <v-divider></v-divider>
-                        <button class="btn btn-danger" @click="deletePost(item.id)">Удалить</button>
+                        <button v-if="getAuth" class="btn btn-danger" @click="deletePost(item.id)">Удалить</button>
                     </div>
                 </div>
                 <div class="card mb-3" v-if="getAuth">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
+            <div class="col-sm-3"></div>
         </div>
     </div>
 </template>

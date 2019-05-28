@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="row">
-            <div class="col-sm-3" style="background-color:lavender;"></div>
+            <div class="col-sm-3"></div>
             <div class="col-sm-6 pt-5">
                 <h3>Объявление</h3>
                 <v-expansion-panel>
@@ -27,7 +27,7 @@
                                 <a :href="item.docs"
                                    download>Скачать документ</a>
                                 <v-divider></v-divider>
-                                <button class="btn btn-danger" @click="deleteDec(item.id)">Удалить</button>
+                                <button v-if="getAuth" class="btn btn-danger" @click="deleteDec(item.id)">Удалить</button>
                             </v-card-text>
                         </v-card>
                     </v-expansion-panel-content>
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3" style="background-color:lavender;"></div>
+            <div class="col-sm-3"></div>
         </div>
     </div>
 </template>
