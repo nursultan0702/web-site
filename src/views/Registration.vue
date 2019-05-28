@@ -33,7 +33,7 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="primary" @click.prevent="registration" :disabled="processing || valid">Зарегистрироваться</v-btn>
+            <v-btn color="primary" @click.prevent="registration">Зарегистрироваться</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
