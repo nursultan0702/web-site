@@ -32,5 +32,7 @@ new Vue({
      vm.$store.dispatch('stateChanged', user);
     });
     this.$store.dispatch('loadNews');
+    this.$store.dispatch('loadDeclarations');
+    this.$store.dispatch('loadResults');
   },
 }).$mount('#app');

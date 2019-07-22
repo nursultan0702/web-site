@@ -5,7 +5,7 @@
             <div class="col-sm-6 pt-5">
                 <h3>Объявление</h3>
                 <v-expansion-panel>
-                    <v-expansion-panel-content v-for="(item,i) in declarations" :key="`${item.id}`">
+                    <v-expansion-panel-content v-for="(item,i) in results" :key="`${item.id}`">
                         <template v-slot:header>
                             <div>№{{item.row}}. {{item.title}}</div>
                         </template>
@@ -15,7 +15,7 @@
                                 <a :href="item.docs"
                                    download>Скачать документ</a>
                                 <v-divider></v-divider>
-                                <button v-if="getAuth" class="btn btn-danger" @click="deleteDec(item.id)">Удалить</button>
+                                <button v-if="getAuth" class="btn btn-danger" @click="deleteResult(item.id)">Удалить</button>
                             </v-card-text>
                         </v-card>
                     </v-expansion-panel-content>
@@ -38,7 +38,7 @@
                         <textarea class="form-control" aria-label="With textarea" maxlength="10000"
                                   v-model="newDeclarationBody"></textarea>
                         <v-divider></v-divider>
-                        <button @click.prevent="saveDeclaration" class="btn btn-primary float-right">Сохранить</button>
+                        <button @click.prevent="saveResults" class="btn btn-primary float-right">Сохранить</button>
                     </div>
                 </div>
             </div>
@@ -58,14 +58,14 @@
             }
         },
         methods: {
-            saveDeclaration() {
+            saveResults() {
                 var today = new Date();
                 var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
                 var docs = "";
                 if (this.file[0].name) {
                     docs = this.file[0].name;
                 }
-                this.$store.dispatch("addDeclaration", {
+                this.$store.dispatch("addResults", {
                     title: this.newDeclarationTitle,
                     body: this.newDeclarationBody,
                     docs: docs,
@@ -93,8 +93,8 @@
             generateUid() {
                 return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
             },
-            deleteDec(id) {
-                this.$store.dispatch("deleteDec", id);
+            deleteResult(id) {
+                this.$store.dispatch("deleteResult", id);
                 this.$swal({
                     type: 'success',
                     title: 'Удалено',
@@ -105,8 +105,8 @@
             }
         },
         computed: {
-            declarations() {
-                return this.$store.getters.getDeclarations
+            results() {
+                return this.$store.getters.getResults
             },
             getAuth(){
                 return this.$store.getters.isUserAuthenticated

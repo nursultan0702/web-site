@@ -2,23 +2,23 @@ import Vue from 'vue'
 
 export default {
     state: {
-        declars: []
+        results: []
     },
     mutations: {
-        set_declarations(state, payload) {
-            state.declars = payload
+        set_results(state, payload) {
+            state.results = payload
         }
     },
     actions: {
-        loadDeclarations({commit}) {
-            let declarations = [];
-            var fromDb = Vue.$db.collection("declarations");
+        loadResults({commit}) {
+            let results = [];
+            var fromDb = Vue.$db.collection("results");
             fromDb.orderBy("row");
             fromDb.get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     var storageRef = Vue.$storage.ref();
                     storageRef.child('docs/' + doc.data().docs).getDownloadURL().then(function(url) {
-                        let declaration = {
+                        let result = {
                             id: doc.id,
                             title: doc.data().title,
                             docs: url,
@@ -26,13 +26,13 @@ export default {
                             body: doc.data().body,
                             row: doc.data().row
                         };
-                        declarations.push(declaration)
+                        results.push(result)
                     })
                 });
             });
-           commit("set_declarations", declarations)
+            commit("set_results", results)
         },
-        addDeclaration({commit},payload) {
+        addResults({commit},payload) {
             var reader = new FileReader();
             reader.onloadend = function (evt) {
                 var blob = new Blob([evt.target.result]);
@@ -42,18 +42,18 @@ export default {
             reader.onerror = function () {
             };
             reader.readAsArrayBuffer(payload.file);
-            Vue.$db.collection("declarations").add({
+            Vue.$db.collection("results").add({
                 title: payload.title,
                 body: payload.body,
                 docs: payload.docs,
                 postDate: payload.postDate
             });
         },
-        deleteDec({commit},payload){
-            Vue.$db.collection("declarations").doc(payload).delete();
+        deleteResult({commit},payload){
+            Vue.$db.collection("results").doc(payload).delete();
         }
     },
     getters: {
-        getDeclarations: (state) => state.declars
+        getResults: (state) => state.results
     }
 }
