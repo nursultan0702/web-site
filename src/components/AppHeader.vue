@@ -25,7 +25,7 @@
           <v-btn class="dropbtn" to='/govsell' flat>Государственные закупки</v-btn>
           <div class="dropdown-content">
             <v-btn to='/declaration' flat>Объявления</v-btn>
-            
+            <v-btn to='/results' flat>Итоги</v-btn>
           </div>
         </div>
         <v-btn @click.prevent="logout()" v-if="isUserAuthenticate" flat>Выйти</v-btn>
@@ -62,12 +62,16 @@ export default {
           route: "/"
         },
         {
-          title: "О нас ",
+          title: "О Клинике ",
           route: "/about"
         },
         {
-          title: "Блоги",
-          route: "/home"
+          title: "Отделения",
+          route: "/"
+        },
+        {
+          title: "Для пациентов",
+          route: "/"
         }
       ];
     }

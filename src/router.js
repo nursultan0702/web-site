@@ -6,6 +6,7 @@ import Registration from './views/Registration.vue'
 import About from './views/About.vue'
 import Declaration from './views/Declaration'
 import Login from './views/Login'
+import Results from './views/Results'
 // import Store  from './store';
 
 Vue.use(Router);
@@ -40,8 +41,13 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: Login,
+      component: Login
     },
+    {
+      path: '/results',
+      name: 'results',
+      component: Results
+    }
   ]
 })
 

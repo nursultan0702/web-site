@@ -10,11 +10,18 @@ import firebaseConfig from './config/firebaseConfig'
 import firebase from 'firebase'
 import "firebase/firestore"
 import VueSweetalert2 from 'vue-sweetalert2';
+import YmapPlugin from 'vue-yandex-maps'
 
 
+const settings = { // you may define your apiKey, lang and version or skip this.
+  apiKey: 'd2bb5776-667e-409d-94ad-fa72b5704d49',
+  lang: 'ru_RU',
+  version: '2.1'
+}
 Vue.config.productionTip = false;
 Vue.use(Vuetify);
 Vue.use(VueSweetalert2);
+Vue.use(YmapPlugin,settings);
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 var storage = firebase.storage();

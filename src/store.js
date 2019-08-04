@@ -4,6 +4,7 @@ import userModule from './store/user'
 import generalModule from './store/general'
 import newsModule from './store/news'
 import declarationModule from './store/declaration'
+import gosvellsModule from './store/gosvell'
 
 Vue.use(Vuex);
 
@@ -12,6 +13,7 @@ export default new Vuex.Store({
   userModule,
   generalModule,
   newsModule,
-  declarationModule
+  declarationModule,
+  gosvellsModule
  }
 })

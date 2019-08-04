@@ -1,22 +1,7 @@
 <template>
-    <div>
-        <div class="row">
-            <div class="col-sm-3"></div>
             <div class="col-sm-6 pt-5">
                 <h3>Объявление</h3>
                 <v-expansion-panel>
-                    <v-expansion-panel-content key="1">
-                        <template v-slot:header>
-                            <div>№1. Объявление о проведении закупа способом запроса ценовых предложений</div>
-                        </template>
-                        <v-card>
-                            <v-card-text>
-                                <a href="https://drive.google.com/file/d/1VbMnko3riIM_W3iWKdKQr5QZEQv-SWfg/view?usp=sharing"
-                                   download>Скачать документ</a>
-                            </v-card-text>
-                        </v-card>
-                    </v-expansion-panel-content>
-
                     <v-expansion-panel-content v-for="(item,i) in declarations" :key="`${item.id}`">
                         <template v-slot:header>
                             <div>№{{i+1}}. {{item.title}}</div>
@@ -54,9 +39,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3"></div>
-        </div>
-    </div>
 </template>
 
 <script>
