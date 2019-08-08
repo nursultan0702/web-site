@@ -22,14 +22,14 @@
           flat
         >{{item.title}}</v-btn>
         <div class="dropdown">
-          <v-btn class="dropbtn" to='/govsell' flat>Государственные закупки</v-btn>
+          <v-btn class="dropbtn"  flat>Государственные закупки</v-btn>
           <div class="dropdown-content">
             <v-btn to='/declaration' flat>Объявления</v-btn>
             <v-btn to='/results' flat>Итоги</v-btn>
           </div>
         </div>
         <v-btn @click.prevent="logout()" v-if="isUserAuthenticate" flat>Выйти</v-btn>
-        <v-btn to="/registration" v-if="!isUserAuthenticate" flat>Регистрация</v-btn>
+<!--        <v-btn to="/registration" v-if="!isUserAuthenticate" flat>Регистрация</v-btn>-->
         <v-btn to="/login" v-if="!isUserAuthenticate" flat>Войти</v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -66,7 +66,11 @@ export default {
           route: "/about"
         },
         {
-          title: "Блоги",
+          title: "Государственные символы",
+          route: "/govsymbols"
+        },
+        {
+          title: "Государственные услуги",
           route: "/home"
         }
       ];

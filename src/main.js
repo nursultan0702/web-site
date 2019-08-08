@@ -10,11 +10,14 @@ import firebaseConfig from './config/firebaseConfig'
 import firebase from 'firebase'
 import "firebase/firestore"
 import VueSweetalert2 from 'vue-sweetalert2';
+import twitter from 'vue-twitter'
+import YmapPlugin from 'vue-yandex-maps'
 
-
+Vue.use(YmapPlugin);
 Vue.config.productionTip = false;
 Vue.use(Vuetify);
 Vue.use(VueSweetalert2);
+Vue.use(twitter);
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 var storage = firebase.storage();

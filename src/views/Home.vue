@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-sm-3 pt-2">
                 <h2>Социальные сети</h2>
-                <a class="twitter-timeline"
-                   data-height="600"
-                   href="https://twitter.com/minhealthKZ?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
+                <twitter>
+                    <a  data-height="600" class="twitter-timeline" href="https://twitter.com/minhealthKZ?ref_src=twsrc%5Etfw">Tweets by realDonaldTrump</a>
+                </twitter>
             </div>
             <div class="col-sm-6 pt-2">
                 <h2>Новости</h2>
