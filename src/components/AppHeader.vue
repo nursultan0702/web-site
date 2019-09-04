@@ -12,7 +12,7 @@
     </v-navigation-drawer>
     <v-toolbar app dark flat color="transparent">
       <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
-      <v-toolbar-title v-text="'Сайт находится в разработке'"></v-toolbar-title>
+      <v-toolbar-title v-text="'Детская городская больница №2\n'"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn
