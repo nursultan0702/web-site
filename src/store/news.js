@@ -17,7 +17,7 @@ export default {
                     var storageRef = Vue.$storage.ref();
                     storageRef.child('images/' + doc.data().img).getDownloadURL().then(function(url) {
                         let post = {
-                            id: doc.id,
+                            id: "#" + doc.id,
                             title: doc.data().title,
                             img: url,
                             postDate: doc.data().postDate,

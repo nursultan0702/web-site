@@ -9,7 +9,7 @@
             </div>
             <div class="col-sm-6 pt-2">
                 <h2>Новости</h2>
-                <div class="card mb-3" v-for="(item) in news" :key="`${item.id}`">
+                <div class="card mb-3" v-for="(item) in news" :key="`${item.id}`" id="#`${item.id}`">
                     <img class="card-img-top" :src="item.img"
                          alt="Card image cap">
                     <div class="card-body">
@@ -44,7 +44,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-3 pt-2">
+                <h2>Последние новости</h2>
+                <div class="card" style="width: 18rem;" v-for="(item) in news" :key="`${item.id}`">
+                    <img class="card-img-top" :src="item.img" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">{{item.body}}</p>
+                    </div>
+                    <div class="card-body">
+                        <a :href="item.id" class="card-link">Читать</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>

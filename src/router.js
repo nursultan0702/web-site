@@ -8,6 +8,7 @@ import Declaration from './views/Declaration'
 import Login from './views/Login'
 import Results from './views/Results'
 import Govsymbols from './views/Govsymbols'
+import Reports from './views/Reports'
 // import Store  from './store';
 
 Vue.use(Router);
@@ -53,6 +54,11 @@ export default new Router({
       path: '/govsymbols',
       name: 'govsymbols',
       component: Govsymbols
+    },
+    {
+      path: '/reports',
+      name: 'reports',
+      component: Reports
     },
   ]
 })

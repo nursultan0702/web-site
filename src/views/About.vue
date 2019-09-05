@@ -3,7 +3,38 @@
   <div class="row">
     <div class="col-sm-3" ></div>
     <div class="col-sm-6">
-
+      <div class="row pt-4">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="/w3images/lights.jpg">
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg" alt="Lights" style="width:100%">
+            <div class="caption">
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg">
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg" alt="Nature" style="width:100%">
+            <div class="caption">
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg">
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg" alt="Fjords" style="width:100%">
+            <div class="caption">
+              <p>Lorem ipsum...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
       <div class="container">
         <div><h1>Детская городская больница №2</h1></div>
         <br />

@@ -72,6 +72,10 @@ export default {
         {
           title: "Государственные услуги",
           route: "/home"
+        },
+        {
+          title: "Финансовый отчет",
+          route: "/reports"
         }
       ];
     }
