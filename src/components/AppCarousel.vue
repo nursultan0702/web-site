@@ -15,7 +15,7 @@ export default {
     };
   },
     mounted() {
-        this.importAll(require.context('/Users/nursultansadyk/Downloads/', true, /\.jpg$/));
+        this.importAll(require.context('/root/images/', true, /\.jpg$/));
     },
 
     methods: {
